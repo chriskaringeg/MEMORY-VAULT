@@ -102,7 +102,7 @@ UPLOADCARE = {
     'secret': '9159265f9cea41b69bb9',
 }
 
-WSGI_APPLICATION = 'photoapp.wsgi.application'
+WSGI_APPLICATION = 'memoryvault.wsgi.application'
 
 
 # Database
