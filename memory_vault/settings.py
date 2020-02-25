@@ -46,12 +46,21 @@ else:
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS')
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'sq_2P_XfwJQH-1U_l3b-RQSU'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = config ('ALLOWED_HOSTS')
+
 
 # Application definition
 
 INSTALLED_APPS = [
+    'vault', 
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -60,7 +69,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pyuploadcare.dj',
     'star_ratings',
-    'photos',
     'bootstrap4',
 ]
 
@@ -74,7 +82,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'photoapp.urls'
+ROOT_URLCONF = 'vault.urls'
 STAR_RATINGS_RERATE = False
 STAR_RATINGS_RANGE = 10
 STAR_RATINGS_ANONYMOUS = True

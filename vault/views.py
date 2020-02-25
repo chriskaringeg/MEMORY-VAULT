@@ -90,4 +90,4 @@ def update_profile(request):
     return render(request, "update_profile.html", {"form":form}) 
 
 def photographer(request):
-    return render(request, 'photographer.html')
+    return render(request, '')

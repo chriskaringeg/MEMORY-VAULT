@@ -9,6 +9,6 @@ urlpatterns=[
     url(r'profile/' , views.profile , name='profile'),
     url(r"^profile/update/$", views.update_profile, name = "update_profile"),
     url(r'^ratings/', include('star_ratings.urls', namespace='ratings', app_name='ratings')),
-    url(r'^booth/',views.booth ,name='booth'),
-    url(r'^', views.photographer, name='photographer'),
+    url(r'^vault/',views.booth ,name='vault'),
+    # url(r'^', views.photographer, name='photographer'),
     ]
